@@ -10,7 +10,7 @@ AFRAME.registerComponent('intersection-spawn', {
             bulletEl.setAttribute('rotation', cameraEl.getAttribute('rotation'));
             bulletEl.setAttribute('geometry', 'primitive: sphere; radius: 0.05');
             bulletEl.setAttribute('material', 'color: #ff0000');
-            bulletEl.setAttribute('bullet', 'speed: -0.3s');
+            bulletEl.setAttribute('bullet', 'speed: -0.5');
 
             el.sceneEl.appendChild(bulletEl);
         });

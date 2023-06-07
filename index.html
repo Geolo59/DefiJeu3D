@@ -9,12 +9,15 @@
     <script src="https://unpkg.com/aframe-controller-cursor-component@0.2.2/dist/aframe-controller-cursor-component.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-motion-capture/343f99/dist/aframe-motion-capture.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+
     <script src="components/intersection-spawn.js"></script>
     <script src="components/random-color.js"></script>
     <script src="components/snap.js"></script>
     <script src="components/bullet.js"></script>
     <script src="components/box-collision.js"></script>
-    <script src="components/score.js"></script>
+    <script src="components/enemy-spawner.js"></script>
+    <script src="components/enemy.js"></script>
 </head>
 <body>
 <a-scene avatar-recorder score>
@@ -29,6 +32,8 @@
         ></a-mixin>
     </a-assets>
     <a-text id="score" value="Score: 0" align="center" position="0 2 -5"></a-text>
+    <a-text id="lives" value="Lives: 3" align="center" position="0 2.5 -5"></a-text>
+
     <a-sky id="bg" radius="30" src="#skyTexture" theta-length="90"></a-sky>
 
     <a-cylinder id="ground" src="#groundTexture" radius="32" height="0.1"></a-cylinder>
@@ -55,6 +60,8 @@
                 intersection-spawn="event: click; mixin: voxel"
         ></a-cursor>
     </a-camera>
+    <a-entity enemy-spawner></a-entity>
+
 </a-scene>
 </body>
 </html>
