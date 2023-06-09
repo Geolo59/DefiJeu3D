@@ -1,6 +1,6 @@
 AFRAME.registerComponent('enemy-spawner', {
     schema: {
-        maxEnemies: {type: 'number', default: 10},
+        maxEnemies: {type: 'number', default: 100},
         spawnInterval: {type: 'number', default: 2000} // in ms
     },
 
